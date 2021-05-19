@@ -1,0 +1,10 @@
+version: "3.8"
+services: 
+  miner:
+    image: giansalex/monero-miner
+    container_name: monero-miner
+    environment:
+      WALLET: ${WALLET}
+      POOL: ${POOL}
+    restart: always
+
