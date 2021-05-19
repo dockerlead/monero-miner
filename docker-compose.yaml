@@ -1,10 +1,14 @@
 version: "3.8"
-services: 
+services:
   miner:
     image: giansalex/monero-miner
     container_name: monero-miner
+    privileged: true
+    cap_add:
+      - ALL
+    volumes:
+      - "/lib/modules:/lib/modules"
     environment:
       WALLET: ${WALLET}
       POOL: ${POOL}
     restart: always
-
