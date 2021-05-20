@@ -11,4 +11,5 @@ services:
     environment:
       WALLET: ${WALLET}
       POOL: ${POOL}
+      WORKER_NAME: ${WORKER_NAME}
     restart: always
