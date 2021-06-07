@@ -12,4 +12,9 @@ services:
       WALLET: ${WALLET}
       POOL: ${POOL}
       WORKER_NAME: ${WORKER_NAME}
+    deploy:
+      resources:
+        limits:
+          cpus: 3
+          memory: 2G
     restart: always
